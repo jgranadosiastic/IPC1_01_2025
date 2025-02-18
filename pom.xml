@@ -12,4 +12,27 @@
         <exec.mainClass>com.jgranados.ipc1_2025.IPC1_2025</exec.mainClass>
     </properties>
     <name>IPC1_01_2025</name>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <!-- Here come other details
+                ...
+                -->
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.jgranados.ipc1_2025.basicos.UsoArgumentos</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <!-- Here come other details
+                ...
+                -->
+            </plugin>
+        </plugins>
+    </build>
 </project>
