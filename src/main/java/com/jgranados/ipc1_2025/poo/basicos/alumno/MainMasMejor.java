@@ -23,7 +23,13 @@ public class MainMasMejor {
         alumno.nombre = recolector.recolectarNombre();
         alumno.notas = recolector.capturarNotas();*/
         
+        alumno.cambiarNombre("nuevo nombre");
+        
         alumno.mostrarDatos();
+        
+        System.out.println("Nombre desde fuera del alumno: " + alumno.obtenerNombre());
+        
+        
         
     }
 }
