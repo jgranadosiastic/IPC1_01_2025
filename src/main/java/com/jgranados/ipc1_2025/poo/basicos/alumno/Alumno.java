@@ -10,12 +10,26 @@ package com.jgranados.ipc1_2025.poo.basicos.alumno;
  */
 public class Alumno {
     
-    int[] notas;
-    String cui;
-    String nombre;
+    private int[] notas;
+    private String cui;
+    private String nombre;
+    
+    public Alumno(String cui, String nombre, int[] notas) {
+        this.cui = cui;
+        this.nombre = nombre;
+        this.notas = notas;
+    }
+    
+    public void cambiarNombre(String nuevoNombre) {
+        nombre = nuevoNombre;
+    }
+    
+    public String obtenerNombre() {
+        return nombre;
+    }
     
     
-    float calcularPromedio() {
+    public float calcularPromedio() {
         /*float total = notas[0] + notas[1] + notas[2];
         
         return total / 3;*/
@@ -29,7 +43,7 @@ public class Alumno {
         return total / notas.length;
     }
     
-    void mostrarDatos() {
+    public void mostrarDatos() {
         float promedio = calcularPromedio();
         System.out.println("CUI: " + cui);
         System.out.println("Nombre: " + nombre);

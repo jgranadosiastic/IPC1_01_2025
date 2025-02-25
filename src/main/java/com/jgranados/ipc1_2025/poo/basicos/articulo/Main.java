@@ -21,8 +21,8 @@ public class Main {
             System.out.println("Ingrese costo base del articulo:");
             costoBase = Float.parseFloat(scanner.nextLine());
 
-            Articulo articulo = new Articulo();
-            articulo.costoBase = costoBase;
+            Articulo articulo = new Articulo(costoBase);
+            //articulo.costoBase = costoBase;
 
             articulo.imprimirPrecios();
             System.out.println("Desea continuar? S/N");

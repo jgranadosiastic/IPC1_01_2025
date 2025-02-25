@@ -26,10 +26,10 @@ public class Main {
         
         int notas[] = capturarNotas();
         
-        Alumno alumno = new Alumno();
-        alumno.cui = cui;
+        Alumno alumno = new Alumno(cui, nombre, notas);
+        /*alumno.cui = cui;
         alumno.nombre = nombre;
-        alumno.notas = notas;
+        alumno.notas = notas;*/
         
         alumno.mostrarDatos();
     }

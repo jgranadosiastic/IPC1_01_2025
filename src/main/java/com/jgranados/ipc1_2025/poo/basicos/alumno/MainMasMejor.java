@@ -13,10 +13,15 @@ public class MainMasMejor {
         
         RecolectorDeDatos recolector = new RecolectorDeDatos();
         
-        Alumno alumno = new Alumno();
-        alumno.cui = recolector.recolectarCui();
+        
+        String cui = recolector.recolectarCui();
+        String nombre = recolector.recolectarNombre();
+        int[] notas = recolector.capturarNotas();
+        
+        Alumno alumno = new Alumno(cui, nombre, notas);
+        /*alumno.cui = recolector.recolectarCui();
         alumno.nombre = recolector.recolectarNombre();
-        alumno.notas = recolector.capturarNotas();
+        alumno.notas = recolector.capturarNotas();*/
         
         alumno.mostrarDatos();
         
