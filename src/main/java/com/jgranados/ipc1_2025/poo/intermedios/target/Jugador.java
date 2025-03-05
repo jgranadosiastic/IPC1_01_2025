@@ -26,36 +26,10 @@ public class Jugador {
     public void lanzar() {
         int puntosDelTurno = 0;
         // escoger tiro
-        int opcion = escogerTiro();
-        Tiro tiroSeleccionado;
-        switch (opcion) {
-            case 1:
-                tiroSeleccionado = new TiroRapido();
-                break;
-            case 2:
-                tiroSeleccionado = new TiroControlado();
-                break;
-            default:
-                tiroSeleccionado = new TiroBajoElBrazo();
-        }
+        Tiro tiroSeleccionado = escogerTiro();
+        
         puntosDelTurno = tiroSeleccionado.calcularPuntos();
-        
-        
-        /*switch (opcion) {
-            case 1:
-                TiroRapido tiroRapido = new TiroRapido();
-                puntosDelTurno = tiroRapido.calcularPuntos();
-                break;
-            case 2:
-                TiroControlado tiroControlado = new TiroControlado();
-                puntosDelTurno = tiroControlado.calcularPuntos();
-                break;
-            default:
-                TiroBajoElBrazo tiroBajoElBrazo = new TiroBajoElBrazo();
-                puntosDelTurno = tiroBajoElBrazo.calcularPuntos();
-        }*/
-        
-        
+           
         
         sumarPuntos(puntosDelTurno);
         imprimirPuntos(puntosDelTurno);
@@ -78,7 +52,7 @@ public class Jugador {
         return puntos;
     }
     
-    private int escogerTiro() {
+    private Tiro escogerTiro() {
         int opcion;
         System.out.println("1. Tiro Rapido ");
         System.out.println("2. Tiro Controlado");
@@ -87,7 +61,14 @@ public class Jugador {
         Scanner scanner = new Scanner(System.in);
         opcion = Integer.parseInt(scanner.nextLine());
         
-        return opcion;
+        switch (opcion) {
+            case 1:
+                return new TiroRapido();
+            case 2:
+                return new TiroControlado();
+            default:
+                return  new TiroBajoElBrazo();
+        }
         
     }
 
