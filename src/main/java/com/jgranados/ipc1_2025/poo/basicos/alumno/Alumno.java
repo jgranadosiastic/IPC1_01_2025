@@ -54,6 +54,13 @@ public class Alumno {
         } else {
             System.out.println("El alumno no aprobo");
         }
-        
+    }
+    
+    public void mostrarDatosSinNotas() {
+        System.out.println("CUI: " + cui);
+        System.out.println("Nombre: " + nombre);    }
+    
+    public boolean esCUIIgual(String cui) {
+        return this.cui.equals(cui);
     }
 }
