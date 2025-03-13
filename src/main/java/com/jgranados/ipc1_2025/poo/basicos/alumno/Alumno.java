@@ -28,6 +28,10 @@ public class Alumno {
         return nombre;
     }
     
+    public String obtenerCui() {
+        return cui;
+    }
+    
     
     public float calcularPromedio() {
         /*float total = notas[0] + notas[1] + notas[2];
