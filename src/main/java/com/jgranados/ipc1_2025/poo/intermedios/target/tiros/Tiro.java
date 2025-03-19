@@ -8,10 +8,12 @@ package com.jgranados.ipc1_2025.poo.intermedios.target.tiros;
  *
  * @author jose
  */
-public class Tiro {
+public abstract class Tiro {
     
     
-    public int calcularPuntos() {
-        return 0;
+    public abstract int calcularPuntos();
+    
+    public final void mostrarMensaje() {
+        System.out.println("ese es un mensaje que no se puede sobreescribir");
     }
 }

@@ -68,7 +68,7 @@ public class Partida {
             
             // cambiamos de turno
             jugadorEnTurno = cambiarJugador();
-            System.out.println("Presione ENTER para continuar...");
+            System.out.println("Presione ENTER para continuar ya que el juego termina cuando alguien alcance el punteo de: " + Target.PUNTEO_PARA_GANAR);
             scanner.nextLine();
         } while (obtenerGanador() == null);
         

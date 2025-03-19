@@ -10,11 +10,9 @@ import com.jgranados.ipc1_2025.poo.intermedios.juegoaccionaventura.personajes.en
  *
  * @author jose
  */
-public class Arma {
+public abstract class Arma {
     protected int puntosDaño;
     
     
-    public int hacerDaño(Enemigo enemigo) {
-        return 0;
-    }
+    public abstract int hacerDaño(Enemigo enemigo);
 }
