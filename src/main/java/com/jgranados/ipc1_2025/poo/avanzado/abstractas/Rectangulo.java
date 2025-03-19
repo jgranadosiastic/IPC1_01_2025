@@ -4,11 +4,13 @@
  */
 package com.jgranados.ipc1_2025.poo.avanzado.abstractas;
 
+import com.jgranados.ipc1_2025.poo.avanzado.interfaces.Movible;
+
 /**
  *
  * @author jose
  */
-public class Rectangulo extends FiguraGeometrica {
+public class Rectangulo extends FiguraGeometrica implements Movible {
     
     private float ladoA;
     private float ladoB;
@@ -21,5 +23,9 @@ public class Rectangulo extends FiguraGeometrica {
     @Override
     public float calcularPerimetro() {
         return 2 * ladoA + 2* ladoB;
+    }
+    
+    public void mover(int punto) {
+        System.out.println("mover desde rectangulo");
     }
 }

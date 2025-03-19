@@ -40,6 +40,7 @@ public class Arco extends Arma {
         return cantidadFlechas > 0;
     }
     
+    @Override
     public int hacerDaño(Enemigo enemigo) {
         if (!puedeAtacar()) {
             return 0;
