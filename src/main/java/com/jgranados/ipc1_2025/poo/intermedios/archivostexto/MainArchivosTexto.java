@@ -25,9 +25,9 @@ import java.util.Scanner;
  */
 public class MainArchivosTexto {
     
-    private static final String PATH_ARCHIVO = "/home/jose/CUNOC/IPC1/2025 01/";
-    private static final String NOMBRE_ARCHIVO = "primertexto.txt";
-    private static final String PATH_COMPLETO = PATH_ARCHIVO + NOMBRE_ARCHIVO;
+    public static final String PATH_ARCHIVO = "/home/jose/CUNOC/IPC1/2025 01/";
+    public static final String NOMBRE_ARCHIVO = "primertexto.txt";
+    public static final String PATH_COMPLETO = PATH_ARCHIVO + NOMBRE_ARCHIVO;
     
     public static void main(String[] args) {
         File miArchivo = new File(PATH_ARCHIVO);
