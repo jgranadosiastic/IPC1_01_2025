@@ -108,33 +108,14 @@ public class TargetFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        pnlGanador.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
         jLabel2.setText("El ganador es el jugador:");
+        pnlGanador.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 30, -1, -1));
 
         lblGanador.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
-
-        javax.swing.GroupLayout pnlGanadorLayout = new javax.swing.GroupLayout(pnlGanador);
-        pnlGanador.setLayout(pnlGanadorLayout);
-        pnlGanadorLayout.setHorizontalGroup(
-            pnlGanadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlGanadorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlGanadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlGanadorLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(lblGanador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        pnlGanadorLayout.setVerticalGroup(
-            pnlGanadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlGanadorLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(lblGanador, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        pnlGanador.add(lblGanador, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 90, 753, 42));
 
         jMenu1.setText("Juego");
 
@@ -196,7 +177,7 @@ public class TargetFrame extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pnlGanador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         pack();
