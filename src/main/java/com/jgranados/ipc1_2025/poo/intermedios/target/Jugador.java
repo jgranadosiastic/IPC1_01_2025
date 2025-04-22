@@ -79,4 +79,9 @@ public class Jugador {
             return false;
         }
     }
+    
+    @Override
+    public String toString() {
+        return nombre + ":" + puntos;
+    }
 }
