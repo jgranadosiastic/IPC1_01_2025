@@ -84,4 +84,10 @@ public class Jugador {
     public String toString() {
         return nombre + ":" + puntos;
     }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+    
+    
 }
