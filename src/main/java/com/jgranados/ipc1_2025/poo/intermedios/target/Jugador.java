@@ -8,13 +8,15 @@ import com.jgranados.ipc1_2025.poo.intermedios.target.tiros.Tiro;
 import com.jgranados.ipc1_2025.poo.intermedios.target.tiros.TiroBajoElBrazo;
 import com.jgranados.ipc1_2025.poo.intermedios.target.tiros.TiroControlado;
 import com.jgranados.ipc1_2025.poo.intermedios.target.tiros.TiroRapido;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author jose
  */
-public class Jugador {
+public class Jugador implements Serializable{
+    public static final long serialVersionUID = 6548987;
     
     private String nombre;
     private int puntos;

@@ -11,6 +11,8 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Random;
 
 /**
@@ -22,11 +24,17 @@ public class ArchivosBinarios {
     public static final String PATH_ARCHIVO = "/home/jose/CUNOC/IPC1/2025 01/";
     public static final String NOMBRE_ARCHIVO = "primerbinario.bindat";
     public static final String PATH_COMPLETO = PATH_ARCHIVO + NOMBRE_ARCHIVO;
+    public static final String PATH_COMPLETO_OBJ = 
+            PATH_ARCHIVO + "primerobjeto.obj";
 
     public static void main(String[] args) {
-        guardarDatosBinarios();
+        //guardarDatosBinarios();
         //leerDatosBinarios();
-        leerDatosVariosBinarios();
+        //leerDatosVariosBinarios();
+        Jugador jugador1 = new Jugador("Nombre");
+        jugador1.setPuntos(500);
+        guardarObjeto(jugador1);
+        leerObjeto();
     }
 
     public static void guardarDatosBinarios() {
@@ -71,6 +79,31 @@ public class ArchivosBinarios {
             } catch (EOFException e) {
                 // terminamos de leer archivo
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void guardarObjeto(Jugador jugador) {
+        File file = new File(PATH_COMPLETO_OBJ);
+        try (FileOutputStream out = new FileOutputStream(file);
+                ObjectOutputStream objectStream = 
+                new ObjectOutputStream(out)) {
+            objectStream.writeObject(jugador);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void leerObjeto() {
+        File file = new File(PATH_COMPLETO_OBJ);
+        
+        try (FileInputStream input = new FileInputStream(file);
+                ObjectInputStream objStream = 
+                        new ObjectInputStream(input)) {
+            Jugador jugador =
+                    (Jugador) objStream.readObject();
+            System.out.println(jugador);
         } catch (Exception e) {
             e.printStackTrace();
         }
